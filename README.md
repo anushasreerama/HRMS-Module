@@ -1,6 +1,6 @@
-**HRMS Lite**
+# HRMS Lite
 
-📌 Project Overview
+## 📌 Project Overview
 
 HRMS Lite is a lightweight Human Resource Management System that allows an admin to manage employees and track their daily attendance.
 
@@ -8,22 +8,22 @@ The application is built as a full-stack web solution with a clean and modern UI
 
 ---
 
-🚀 Features
+## 🚀 Features
 
-👨‍💼 Employee Management
+### 👨‍💼 Employee Management
 
 * Add new employees
 * View all employees
 * Delete employees
 * Duplicate employee validation
 
-📅 Attendance Management
+### 📅 Attendance Management
 
 * Mark attendance (Present / Absent)
 * View attendance by employee
 * Prevent duplicate attendance entries
 
-🎨 UI Features
+### 🎨 UI Features
 
 * Modern dashboard with cards
 * Sidebar navigation
@@ -31,33 +31,36 @@ The application is built as a full-stack web solution with a clean and modern UI
 * Tailwind CSS styling
 * Clean tables and forms
 
+---
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
-🔹Frontend
+### Frontend
 
 * React.js
 * Tailwind CSS
 * Axios
 
-🔹Backend
+### Backend
 
 * FastAPI (Python)
 * SQLAlchemy
 
-🔹Database
+### Database
 
 * PostgreSQL (Production)
 * SQLite (Local Development)
 
-🔹Deployment
+### Deployment
 
 * Frontend: Vercel
 * Backend: Render
 
-⚙️ Steps to Run Locally
+---
 
-🔹 Backend Setup
+## ⚙️ Steps to Run Locally
+
+### 🔹 Backend Setup
 
 ```bash
 cd backend
@@ -70,8 +73,9 @@ uvicorn main:app --reload
 👉 Backend runs at:
 http://127.0.0.1:8000
 
+---
 
-🔹 Frontend Setup
+### 🔹 Frontend Setup
 
 ```bash
 cd frontend
@@ -82,14 +86,16 @@ npm start
 👉 Frontend runs at:
 http://localhost:3000
 
+---
 
-🌐 Deployment Links
+## 🌐 Deployment Links
 
 * Frontend: https://your-vercel-app.vercel.app
 * Backend: https://your-render-app.onrender.com
 
+---
 
-⚠️ Assumptions / Limitations
+## ⚠️ Assumptions / Limitations
 
 * Single admin user (no authentication implemented)
 * No role-based access control
