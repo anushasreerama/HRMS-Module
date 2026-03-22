@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API } from "../api";
+import Table from "./Table";
 
 function EmployeeList() {
   const [employees, setEmployees] = useState([]);
@@ -18,35 +19,25 @@ function EmployeeList() {
     fetchEmployees();
   }, []);
 
+  const columns = [
+    { header: "Employee ID", accessor: (row) => row.employee_id },
+    { header: "Name", accessor: (row) => row.name },
+    { header: "Email", accessor: (row) => row.email },
+    { header: "Department", accessor: (row) => row.department },
+  ];
+
   return (
     <div>
-      <h3>Employee List</h3>
-      {employees.length === 0 ? <p>No employees</p> : (
-        <table border="1">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Dept</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {employees.map(e => (
-              <tr key={e.id}>
-                <td>{e.employee_id}</td>
-                <td>{e.name}</td>
-                <td>{e.email}</td>
-                <td>{e.department}</td>
-                <td>
-                  <button onClick={() => deleteEmployee(e.id)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+            <h1 className="text-2xl font-medium text-black-700 mb-6">
+  Employees
+</h1>
+      
+
+      <Table
+        columns={columns}
+        data={employees}
+        onDelete={deleteEmployee}
+      />
     </div>
   );
 }
