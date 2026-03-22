@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# HRMS Lite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Project Overview
 
-## Available Scripts
+HRMS Lite is a lightweight Human Resource Management System that allows an admin to manage employees and track their daily attendance.
 
-In the project directory, you can run:
+The application is built as a full-stack web solution with a clean and modern UI. It focuses on essential HR functionalities such as employee record management and attendance tracking.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👨‍💼 Employee Management
 
-### `npm test`
+* Add new employees
+* View all employees
+* Delete employees
+* Duplicate employee validation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📅 Attendance Management
 
-### `npm run build`
+* Mark attendance (Present / Absent)
+* View attendance by employee
+* Prevent duplicate attendance entries
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🎨 UI Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Modern dashboard with cards
+* Sidebar navigation
+* Responsive layout
+* Tailwind CSS styling
+* Clean tables and forms
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* React.js
+* Tailwind CSS
+* Axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* FastAPI (Python)
+* SQLAlchemy
 
-## Learn More
+### Database
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* PostgreSQL (Production)
+* SQLite (Local Development)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Frontend: Vercel
+* Backend: Render
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⚙️ Steps to Run Locally
+
+### 🔹 Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+👉 Backend runs at:
+http://127.0.0.1:8000
+
+---
+
+### 🔹 Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+👉 Frontend runs at:
+http://localhost:3000
+
+---
+
+## 🌐 Deployment Links
+
+* Frontend: https://your-vercel-app.vercel.app
+* Backend: https://your-render-app.onrender.com
+
+---
+
+## ⚠️ Assumptions / Limitations
+
+* Single admin user (no authentication implemented)
+* No role-based access control
+* No pagination for large datasets
+* Basic validation only
+* Response takes time to execute as it is deployed in free features
